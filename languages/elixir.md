@@ -16,8 +16,7 @@ end
 ## Import
 
 ``` elixir
-String.a() + String.b()
-
+# String.a() + String.b()
 import String
 a() + b()
 ```
