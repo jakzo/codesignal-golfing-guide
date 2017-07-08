@@ -2,12 +2,16 @@
 *Collection of code golf tips specific to CodeFights (where whitespace is free
   and input/output is performed with functions).*
 
-### Language Tips
+## Language Tips
+- [JavaScript](languages/javascript.md)
+- [Python](languages/python.md)
+- [Java](languages/java.md)
+- [C#](languages/cs.md)
 - [R](languages/r.md)
 - [Erlang](languages/erlang.md)
 - [Elixir](languages/elixir.md)
 
-### Example Challenges
+## Example Challenges
 These are simple challenges which showcase the shortest way to perform some operation.
 
 - [Regex Replace](examples/regex-replace.md)
@@ -19,5 +23,3 @@ These are simple challenges which showcase the shortest way to perform some oper
 - [Hypotenuse](examples/hypotenuse.md)
 - [Log 2](examples/log-2.md)
 - [Square](examples/square.md)
-
-*Pull requests welcome.*
