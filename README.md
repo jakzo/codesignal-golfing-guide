@@ -1,7 +1,7 @@
 
 # CodeFights Golfing Guide
 
-*Collection of code golf tricks specific to CodeFights (where whitespace is free
+*Collection of code golf tips specific to CodeFights (where whitespace is free
   and input/output is performed with functions).*
 
 
