@@ -1,20 +1,13 @@
-
 # CodeFights Golfing Guide
-
 *Collection of code golf tips specific to CodeFights (where whitespace is free
   and input/output is performed with functions).*
 
-
 ### Language Tips
-
+- [Erlang](languages/erlang.md)
 - [Elixir](languages/elixir.md)
 
-
 ### Example Challenges
-
 These are simple challenges which showcase the shortest way to perform some operation.
-
-*(Ordered most recent to least recent)*
 
 - [Regex Replace](examples/regex-replace.md)
 - [Regex Match](examples/regex-match.md)
