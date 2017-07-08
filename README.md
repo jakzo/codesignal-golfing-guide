@@ -3,6 +3,7 @@
   and input/output is performed with functions).*
 
 ### Language Tips
+- [R](languages/r.md)
 - [Erlang](languages/erlang.md)
 - [Elixir](languages/elixir.md)
 
