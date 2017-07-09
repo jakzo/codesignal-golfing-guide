@@ -9,6 +9,7 @@
 - [C#](languages/cs.md)
 - [R](languages/r.md)
 - [Erlang](languages/erlang.md)
+- [Clojure](languages/clojure.md)
 - [Elixir](languages/elixir.md)
 
 ## Example Challenges
