@@ -11,6 +11,7 @@
 - [Erlang](languages/erlang.md)
 - [Clojure](languages/clojure.md)
 - [Elixir](languages/elixir.md)
+- [CoffeeScript](languages/coffeescript.md)
 
 ## Example Challenges
 These are simple challenges which showcase the shortest way to perform some operation.
