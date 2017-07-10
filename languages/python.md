@@ -5,6 +5,7 @@
 challenge = lambda x, y, z: x + y + z
 
 def challenge(x, y, z):
+  ...
   return x + y + z
 ```
 - __Logging__
