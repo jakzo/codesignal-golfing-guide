@@ -22,10 +22,11 @@ f = (n) ->  # `f = n ->` is not allowed
   x = n + 1
   x / 2     # return value of `f`
 ```
-- __function calls need no parentheses__ - can also chain without parentheses if there
-  is no space between the function and the argument
+- __function calls need no parentheses__ - can also chain without parentheses if
+  using tagged template literals
 ``` coffeescript
-str.split"x".join"y" == str.split("x").join("y")
+"x".repeat 4 == "x".repeat(4)
+str.split"x".join"y"  == str.split("x").join("y")
 str.split "x".join"y" == str.split("x".join("y"))
 ```
 - __No ternary__ - analogue is `x = if p then a else b` but that is long
