@@ -17,6 +17,7 @@
 ## Example Challenges
 These are simple challenges which showcase the shortest way to perform some operation.
 
+- [Transliterate](examples/transliterate.md)
 - [Regex Replace](examples/regex-replace.md)
 - [Regex Match](examples/regex-match.md)
 - [Char at Index](examples/char-at-index.md)
