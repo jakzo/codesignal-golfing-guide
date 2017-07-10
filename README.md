@@ -8,6 +8,7 @@
 - [Java](languages/java.md)
 - [C#](languages/cs.md)
 - [R](languages/r.md)
+- [Haskell](languages/haskell.md)
 - [Erlang](languages/erlang.md)
 - [Common Lisp](languages/common-lisp.md)
 - [Clojure](languages/clojure.md)
