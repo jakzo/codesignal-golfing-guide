@@ -3,9 +3,9 @@
   and input/output is performed with functions).*
 
 ## Language Cheat Sheets
-These pages contain golfing tricks and tips for each language. They should have
-enough information to them to new languages from scratch (or at least how to write
-golfy code in the language).
+These pages contain golfing idioms and tips for each language. They should have
+enough information in them to learn new languages from scratch (or at least how
+to write golfy code in the language).
 
 - [JavaScript](languages/javascript.md)
 - [Python](languages/python.md)
