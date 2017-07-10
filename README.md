@@ -2,7 +2,7 @@
 *Collection of code golf tips specific to CodeFights (where whitespace is free
   and input/output is performed with functions).*
 
-## Language Cheat Sheets
+## Language Cheat Sheets (in progress)
 These pages contain golfing idioms and tips for each language. They should have
 enough information in them to learn new languages from scratch (or at least how
 to write golfy code in the language).
