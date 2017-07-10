@@ -1,26 +1,24 @@
 # CoffeeScript
+CoffeeScript is JavaScript with different syntax. All types, methods, etc. are
+the same as JavaScript. We will only cover the differences between
+CoffeeScript and JavaScript.
 
-## Function Declaration
+__Function Declaration__
 ``` coffeescript
 challenge = (x, y, z) ->
   x + y + z
 ```
 
-## Logging
+__Logging__
 ``` coffeescript
 challenge = (x, y, z) ->
   console.log x*y, y*z
   x + y + z
 ```
 
-## Cheat Sheet
-CoffeeScript is JavaScript with different syntax. All types, methods, etc. are
-the same as JavaScript. We will only cover the differences between
-CoffeeScript and JavaScript.
-
-- No curly braces - use indentation instead
-- Implicit return - no need to write return at the end of a function
-- Parentheses required around function arguments for only one argument
+- __No curly braces__ - use indentation instead
+- __Implicit return__ - no need to write return at the end of a function
+- __Parentheses required around function arguments__ for only one argument
 
 ``` js
 // JavaScript
@@ -37,10 +35,10 @@ f = (n) ->
   x / 2
 ```
 
-- function calls need no parentheses - can also chain without parentheses if there
+- __function calls need no parentheses__ - can also chain without parentheses if there
   is no space between the function and the argument
-- No ternary - analogue is `x = if p then a else b` but that is long
-- List comprehension
-- string interpolation is `"a#{myVar}b"`
-- `until` - means `while !condition`
-- No `var` - no global variables
+- __No ternary__ - analogue is `x = if p then a else b` but that is long
+- __List comprehension__
+- __String interpolation__ is `"a#{myVar}b"`
+- __`until`__ - means `while !condition`
+- __No `var`__ - no global variables
