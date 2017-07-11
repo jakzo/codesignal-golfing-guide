@@ -3,9 +3,7 @@
   and input/output is performed with functions).*
 
 ## Language Cheat Sheets (in progress)
-These pages contain golfing idioms and tips for each language. They should have
-enough information in them to learn new languages from scratch (or at least how
-to write golfy code in the language).
+These pages contain golfing idioms and tips for each language.
 
 - [JavaScript](languages/javascript.md)
 - [Python](languages/python.md)
@@ -22,10 +20,11 @@ to write golfy code in the language).
 ## Example Challenges
 These are simple challenges which showcase the shortest way to perform some operation.
 
+- [While](examples/while.md)
 - [Transliterate](examples/transliterate.md)
+- [Char at Index](examples/char-at-index.md)
 - [Regex Replace](examples/regex-replace.md)
 - [Regex Match](examples/regex-match.md)
-- [Char at Index](examples/char-at-index.md)
 - [String Concatenation](examples/string-concatenation.md)
 - [Square Root](examples/square-root.md)
 - [Int to Str](examples/int-to-str.md)
