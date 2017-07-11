@@ -3,7 +3,7 @@
 ## Function Declaration
 ``` lua
 function challenge(x, y, z)
-  -- ...
+  ...
   return x + y + z
 end
 ```
@@ -15,8 +15,8 @@ TODO
 
 ## Variables
 ``` lua
-a = 1
-a = {1, 2, 3}
+a = 1         -- 1
+a = {1, 2, 3} -- [1, 2, 3]
 ```
 
 ## Loops
@@ -26,7 +26,7 @@ while x != y do
   ...
 end
 
--- Range
+-- Range (3 4 5 6 7 8)
 for i = 3, 8 do
   ...
 end
