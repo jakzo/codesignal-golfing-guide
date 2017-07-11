@@ -16,8 +16,10 @@
 
 ## Variables
 ``` common-lisp
-(setq a 1)         ;; 1
-(setq a #(1 2 3)) ;; [1, 2, 3]
+(setq a 1)                        ;; 1
+(setq a (list (+ x y) (+ y z)))   ;; [x+y, y+z] as list
+(setq a #(1 2 x))                 ;; [1, 2, "x"] as vector
+(setq a (vector (+ x y) (+ y z))) ;; [x+y, y+z] as vector
 ```
 
 ## Loops
