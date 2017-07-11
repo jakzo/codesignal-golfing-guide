@@ -10,6 +10,7 @@ These pages contain golfing idioms and tips for each language.
 - [Java](languages/java.md)
 - [C#](languages/cs.md)
 - [R](languages/r.md)
+- [Lua](languages/lua.md)
 - [Haskell](languages/haskell.md)
 - [Kotlin](languages/kotlin.md)
 - [Erlang](languages/erlang.md)

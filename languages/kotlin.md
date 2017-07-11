@@ -32,19 +32,20 @@ var a = 1 // mutable
 val b = 2 // immutable
 a++ // ++a, --a, etc. same as Java
 a += 3 // etc
+val a = listOf(1, 2, 3)
 ```
 
 ## Loops
 ``` kotlin
 // While
-while (a < b); // condition must be boolean (not just int, etc)
-while (a < b) x /= 2
-while (a < b) { ... }
+while (x != y); // condition must be boolean (not just int, etc)
+while (x != y) ...
+while (x != y) { ... }
 
-// Iterate over list
+// List
 for (n in arr)
 
-// Iterate over range
+// Range
 for (i in 1..5)
 ```
 
