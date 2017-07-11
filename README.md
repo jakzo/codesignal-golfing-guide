@@ -11,6 +11,7 @@ These pages contain golfing idioms and tips for each language.
 - [C#](languages/cs.md)
 - [R](languages/r.md)
 - [Haskell](languages/haskell.md)
+- [Kotlin](languages/kotlin.md)
 - [Erlang](languages/erlang.md)
 - [Common Lisp](languages/common-lisp.md)
 - [Clojure](languages/clojure.md)
