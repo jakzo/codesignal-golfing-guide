@@ -22,6 +22,7 @@ These pages contain golfing idioms and tips for each language.
 ## Example Challenges
 These are simple challenges which showcase the shortest way to perform some operation.
 
+- [Log 2](examples/log-2.md)
 - [While Loop](examples/while.md)
 - [Transliterate](examples/transliterate.md)
 - [Char at Index](examples/char-at-index.md)
@@ -31,5 +32,4 @@ These are simple challenges which showcase the shortest way to perform some oper
 - [Square Root](examples/square-root.md)
 - [Int to Str](examples/int-to-str.md)
 - [Hypotenuse](examples/hypotenuse.md)
-- [Log 2](examples/log-2.md)
 - [Square](examples/square.md)

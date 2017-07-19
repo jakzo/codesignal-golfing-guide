@@ -34,6 +34,7 @@ Casts are pretty weird in JS, so here's a section about how they work:
 '0b101' -> 5   // 0b binary format
 '0xa1'  -> 161 // 0x hex format
 '011'   -> 11  // leading zeroes have no effect, no octal format
+''      -> 0   // empty string casts to 0
 
 '1a'    -> NaN // NaN = not-a-number, non-digit in string
 '1 2'   -> NaN // non-digit, not leading or trailing space
@@ -135,8 +136,8 @@ a = [x+y, y+z, 'asdf'] // [x+y, y+z, "asdf"]
 ``` js
 // While
 while (x != y);
-while (x != y) ...;
-while (x != y) { ... };
+while (x != y) ...
+while (x != y) { ... }
 
 // Range (3 4 5 6 7 8)
 for (i = 2; i++ < 9; ) ...
