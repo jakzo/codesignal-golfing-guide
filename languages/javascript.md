@@ -24,6 +24,12 @@ challenge = (x, y, z) => {
   return x + y + z
 }
 ```
+You can also create timers with the `console` (note that you must pass the same identifier to `time` and `timeEnd`).
+``` js
+console.time('identifier');
+// ... do work here ...
+console.timeEnd('identifier'); // identifier: 78710.08ms
+```
 
 ## Casts
 Casts are pretty weird in JS, so here's a section about how they work:
