@@ -120,7 +120,7 @@ Casts are pretty weird in JS, so here's a section about how they work:
 ['a']     -> "a"     -> NaN
 [1, 2, 3] -> "1,2,3" -> NaN
 ```
-- `number + number` does addition
+- `number + number` does addition (`boolean`s also act like numbers)
 ``` js
 4 + 5 = 9
 ```
