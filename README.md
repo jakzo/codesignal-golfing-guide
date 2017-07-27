@@ -22,6 +22,8 @@ These pages contain golfing idioms and tips for each language.
 ## Example Challenges
 These are simple challenges which showcase the shortest way to perform some operation.
 
+- [Array Iterate](examples/array-iterate.md)
+- [Power](examples/power.md)
 - [Log 2](examples/log-2.md)
 - [While Loop](examples/while.md)
 - [Transliterate](examples/transliterate.md)
