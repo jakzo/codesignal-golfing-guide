@@ -176,7 +176,7 @@ func = x => x*2
 0   == 'a'
 1   == [1, 2]
 ```
-- `string == notNumber` and `notNumber == string` compares as strings
+- `string == notNumber` and `notNumber == string` compare as strings
 - `notNumberOrString == notNumberOrString` compares by reference
 ``` js
 [1, 2, 3] == [1, 2, 3] // false, because they are different arrays in memory
