@@ -33,9 +33,6 @@ while (x != y);
 while (x != y) ...
 while (x != y) { ... }
 
-// Loop indefinitely
-for (;;) { ... }
-
 // Range (3 4 5 6 7 8)
 for (i = 2; i++ < 9; ) ...
 ```
