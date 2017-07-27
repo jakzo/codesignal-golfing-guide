@@ -1,6 +1,4 @@
 # JavaScript
-- __dynamically typed__ (eg. `a = 2; a = 'zxcv'` is allowed)
-- __weakly typed__ (eg. `if (x != y)` can be written as `if (x - y)`)
 
 ## Function Declaration
 ``` js
@@ -17,6 +15,40 @@ challenge = (x, y, z) => {
   console.log(x*y, y*z);
   return x + y + z
 }
+```
+
+## Types
+JS is __weakly typed__ (eg. `if (x != y)` can be written as `if (x - y)`).
+``` js
+// Primitives:
+0 // number
+true // boolean (behaves mostly the same as `1` (true) or `0` (false))
+'asdf' // string
+
+// All primitives are immutable (eg. `s = 'x'; s += 'y'; s == 'x' // true`)
+
+// Objects:
+[1, 2, 3] // array
+{ x: 'fds' } // object
+x => x+1 // function
+
+// You can access and set *any* property on these object types:
+a = [1, 2, 3]
+a[1] = 5           // a = [1, 5, 3]
+a[5] = 7           // a = [1, 5, 3, undefined x 2, 7]
+a[-1] = 9          // a = [1, 5, 3, undefined x 2, 7] + { '-1': 9 }
+a['-1'] = 4        // a = [1, 5, 3, undefined x 2, 7] + { '-1': 4 }
+a['ab'] = 'cd' // a = [1, 5, 3, undefined x 2, 7] + { '-1': 4, 'ab': 'cd' }
+```
+
+## Truthiness
+``` js
+// Falsy
+undefined / null
+0 / false
+'' // empty string
+
+// Everything else is truthy
 ```
 
 ## Variables
