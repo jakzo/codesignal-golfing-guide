@@ -2,12 +2,6 @@
 - __dynamically typed__ (eg. `a = 2; a = 'zxcv'` is allowed)
 - __weakly typed__ (eg. `if (x != y)` can be written as `if (x - y)`)
 
-## General Tips
-- use `|` after `map` when returning a number
-``` js
-challenge
-```
-
 ## Function Declaration
 ``` js
 challenge = (x, y, z) => x + y + z
@@ -23,6 +17,48 @@ challenge = (x, y, z) => {
   console.log(x*y, y*z);
   return x + y + z
 }
+```
+
+## Variables
+``` js
+a = 1                  // 1 (global)
+var a = 1              // 1 (local, only use if necessary for recursion, etc)
+a = [x+y, y+z, 'asdf'] // [x+y, y+z, "asdf"]
+```
+
+## Loops
+``` js
+// While
+while (x != y);
+while (x != y) ...
+while (x != y) { ... }
+
+// Loop indefinitely
+for (;;) { ... }
+
+// Range (3 4 5 6 7 8)
+for (i = 2; i++ < 9; ) ...
+```
+
+## Reduce
+``` js
+// Example: sum of array
+a = [4, 7, 5]
+// Use `eval` and `join` for simple cases
+eval(a.join`+`) // 15 chars
+// Use `map` if you cannot do the calculation just by joining
+s = 0
+a.map(n => s += n) && s // 20 chars, works because `a.map()` is always truthy
+// Numbers can also be returned with `|` instead of `&&` (see casts section)
+s = 0
+a.map(n => s += n) | s // 19 chars
+// But this will not work if `a.length == 1` and `a.map(...)[0]` is a number
+// such that `(a.map(...)[0] | result) != result`
+s = 0                             // returns `6` instead of `2` because `map`
+[2].map(n => (s += n, x = 4)) | s //     returns `[4]` and `([4] | 2) == 6`)
+// There is a `reduce` function, but it is longer 90% of the time
+a.reduce((s, n) => s + n)    // 20 chars, `s` initialised to `a[0]`
+a.reduce((s, n) => s + n, 0) // 22 chars, `s` initialised to `0`
 ```
 
 ## Casts
@@ -123,25 +159,4 @@ arrA == arrB // true, they are the same array (pushing to one will push to both)
 'x'.repeat('3') // "xxx"
 ['a', 'b', 'c'].join(1) // "a1b1c" (1 cast to "1")
 'xaaayaz'.match('a+') // ["aaa"] ('a+' cast to regex /a+/)
-```
-
-## Variables
-``` js
-a = 1                  // 1 (global)
-var a = 1              // 1 (local, only use if necessary for recursion, etc)
-a = [x+y, y+z, 'asdf'] // [x+y, y+z, "asdf"]
-```
-
-## Loops
-``` js
-// While
-while (x != y);
-while (x != y) ...
-while (x != y) { ... }
-
-// Loop indefinitely
-for (;;) { ... }
-
-// Range (3 4 5 6 7 8)
-for (i = 2; i++ < 9; ) ...
 ```
