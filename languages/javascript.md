@@ -29,9 +29,8 @@ a = [x+y, y+z, 'asdf'] // [x+y, y+z, "asdf"]
 ## Loops
 ``` js
 // While
-while (x != y);
-while (x != y) ...
-while (x != y) { ... }
+for (; x > y; ...) ...
+for (; x > y; ...) { ... }
 
 // Range (3 4 5 6 7 8)
 for (i = 2; i++ < 9; ) ...
@@ -42,7 +41,7 @@ for (i = 2; i++ < 9; ) ...
 // Example: sum of array
 a = [4, 7, 5]
 // Use `eval` and `join` for simple cases
-eval(a.join`+`) // 15 chars
+eval(a.join`+`) // 15 chars, creates string `"4+7+5"` then `eval`s it as JS code
 // Use `map` if you cannot do the calculation just by joining
 s = 0
 a.map(n => s += n) && s // 20 chars, works because `a.map()` is always truthy
