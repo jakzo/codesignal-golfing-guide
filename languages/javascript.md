@@ -32,7 +32,7 @@ true // boolean (behaves mostly the same as `1` (true) or `0` (false))
 { x: 'fds' } // object
 x => x+1 // function
 
-// You can access and set *any* property on these object types:
+// You can access and set *any* property on objects:
 a = [1, 2, 3]
 a[1] = 5           // a = [1, 5, 3]
 a[5] = 7           // a = [1, 5, 3, undefined x 2, 7]
@@ -72,11 +72,14 @@ for (i = 2; i++ < 9; ) ...
 ``` js
 // Example: sum of array
 a = [4, 7, 5]
+
 // Use `eval` and `join` for simple cases
 eval(a.join`+`) // 15 chars, creates string `"4+7+5"` then `eval`s it as JS code
+
 // Use `map` if you cannot do the calculation just by joining
 s = 0
 a.map(n => s += n) && s // 20 chars, works because `a.map()` is always truthy
+
 // Numbers can also be returned with `|` instead of `&&` (see casts section)
 s = 0
 a.map(n => s += n) | s // 19 chars
@@ -84,6 +87,7 @@ a.map(n => s += n) | s // 19 chars
 // such that `(a.map(...)[0] | result) != result`
 s = 0                             // returns `6` instead of `2` because `map`
 [2].map(n => (s += n, x = 4)) | s //     returns `[4]` and `([4] | 2) == 6`)
+
 // There is a `reduce` function, but it is longer 90% of the time
 a.reduce((s, n) => s + n)    // 20 chars, `s` initialised to `a[0]`
 a.reduce((s, n) => s + n, 0) // 22 chars, `s` initialised to `0`
