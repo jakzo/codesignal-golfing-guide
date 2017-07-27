@@ -140,7 +140,7 @@ arr + 3       -> "1,2,zzz,33"
 func = x => x*2
 4 + func      -> "4x => x*2"
 ```
-- operators `-`, `*`, `/`, `<`, `<=`, `>`, `>=` and unary `+-` always cast
+- operators `-`, `*`, `/` and unary `+-` always cast
   operands to numbers
 - bitwise operators (`|`, `&`, `~`, etc) always cast operands to signed
   32-bit integers (if something cannot be cast to a 32-bit integer, it casts to `0`)
@@ -156,7 +156,7 @@ func = x => x*2
 0xf000000003 << 0xf000000001 = 6 // 0xf000000003 -> 3, 0xf000000001 -> 1
 ```
 - `number == number`, `number == notNumber` and `notNumber == number` (and
-  same with `!=`) cast operands to numbers (use `===` for strict equality)
+  same with `!=`, `<`, `<=`, etc.) cast operands to numbers (use `===` for strict equality)
 ``` js
 // True
 1 == 1
@@ -176,7 +176,7 @@ func = x => x*2
 0   == 'a'
 1   == [1, 2]
 ```
-- `string == string` compares as strings
+- `string == notNumber` and `notNumber == string` compares as strings
 - `notNumberOrString == notNumberOrString` compares by reference
 ``` js
 [1, 2, 3] == [1, 2, 3] // false, because they are different arrays in memory
