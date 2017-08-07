@@ -58,6 +58,16 @@ var a = 1              // 1 (local, only use if necessary for recursion, etc)
 a = [x+y, y+z, 'asdf'] // [x+y, y+z, "asdf"]
 ```
 
+## Ranges
+JS has no range syntax.
+``` js
+[...Array(5).keys()] // [0, 1, 2, 3, 4]
+
+a = []
+for (i = 2; i < 8; i += 2) a.push(i)
+a // [2, 4, 6]
+```
+
 ## Loops
 ``` js
 // While
