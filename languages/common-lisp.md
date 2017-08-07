@@ -29,5 +29,5 @@
       do ...)
 
 -- Range (3 4 5 6 7 8)
-(loop for TODO)
+(loop for i from 3 to 8 ...)
 ```
