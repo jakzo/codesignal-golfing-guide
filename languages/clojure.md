@@ -5,7 +5,7 @@
 (def challenge #(* % 2))
 (defn challenge [x] (* x 2))
 
-(def challenge #(* %1 %2 %3))
+(def challenge #(+ %1 %2 %3))
 (defn challenge [x y z]
   (+ x y z))
 ```
