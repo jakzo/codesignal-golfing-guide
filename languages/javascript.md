@@ -55,7 +55,54 @@ undefined / null
 ``` js
 a = 1                  // 1 (global)
 var a = 1              // 1 (local, only use if necessary for recursion, etc)
-a = [x+y, y+z, 'asdf'] // [x+y, y+z, "asdf"]
+```
+
+## Arrays
+``` js
+a = [1+2, 'asdf', 99]
+
+// Length
+a.length // 3
+
+// Access
+a[1]   // 'asdf'
+a['1']
+
+// Slice
+a.slice(1, 3) // ['asdf', 99]
+
+// Push
+a.push(6, 7)     // [3, 'asdf', 99, 6, 7]
+a = [...a, 6, 7]
+a[a.length] = 6  // [3, 'asdf', 99, 6]
+
+// Pop
+a.pop() // 99, a = [3, 'asdf']
+
+// Shift
+a.shift() // 3, a = ['asdf', 99]
+
+// Unshift
+a.unshift(1) // [1, 3, 'asdf', 99]
+
+// Splice
+a.splice(1, 0, 'x', 'y') // [3, 'x', 'y', 'asdf', 99]
+
+// Remove
+a.splice(1, 1) // [3, 99]
+
+// Concatenate
+b = [8, 9]
+a.push(...b) // [3, 'asdf', 99, 8, 9]
+a = a.concat(b)
+a = [...a, ...b]
+
+// Clone
+[...a]
+a.slice()
+
+// NOTE: You can set and access negative indices on an array, but they count as
+//       object properties, not array indices.
 ```
 
 ## Ranges
@@ -98,7 +145,7 @@ a.map(n => s += n) | s // 19 chars
 s = 0                             // returns `6` instead of `2` because `map`
 [2].map(n => (s += n, x = 4)) | s //     returns `[4]` and `([4] | 2) == 6`)
 
-// There is a `reduce` function, but it is longer 90% of the time
+// There is a `reduce` function, but it is longer 99% of the time
 a.reduce((s, n) => s + n)    // 20 chars, `s` initialised to `a[0]`
 a.reduce((s, n) => s + n, 0) // 22 chars, `s` initialised to `0`
 ```

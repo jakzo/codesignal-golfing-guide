@@ -31,15 +31,6 @@ var a = 1              // 1
 let a = 1              // 1 (immutable)
 ```
 
-## Loops
-``` swift
-// While
-while x < y { ... }
-
-// Range (3 4 5 6 7 8)
-for i in 3 ... 8 { ... }
-```
-
 ## Arrays
 ``` swift
 // If the array will be modified, it must be mutable (declared using `var`)
@@ -72,6 +63,15 @@ a.remove(at: 1) // a = [1, 3]
 ``` swift
 1 ... 5 // closed range: 1 2 3 4 5
 1 ..< 5 // half-open range: 1 2 3 4
+```
+
+## Loops
+``` swift
+// While
+while x < y { ... }
+
+// Range (3 4 5 6 7 8)
+for i in 3 ... 8 { ... }
 ```
 
 ## Map
