@@ -2,9 +2,10 @@
 
 ## Function Declaration
 ``` js
-challenge = (x, y, z) => x + y + z
+challenge = (x, y, z) => x + y + z // single statement
 
 challenge = (x, y, z) => {
+  // multiple statements
   return x + y + z
 }
 ```
@@ -53,13 +54,21 @@ undefined / null
 
 ## Variables
 ``` js
-a = 1                  // 1 (global)
-var a = 1              // 1 (local, only use if necessary for recursion, etc)
+a = 1     // 1 (global)
+var a = 1 // 1 (local, only use if necessary for recursion, etc)
 ```
 
 ## Arrays
 ``` js
-a = [1+2, 'asdf', 99]
+a = [1+2, 'asdf', 99] // [3, 'asdf', 99]
+
+// Initialise with value
+Array(3).fill(0) // [0, 0, 0]
+Array(5).fill(3) // [3, 3, 3, 3, 3]
+
+// Initialise matrix
+a = []; for (i = 3; i--; ) a[i] = [] // 25 chars
+a = [...Array(3)].map(_ => [])       // 26 chars
 
 // Length
 a.length // 3
@@ -72,8 +81,8 @@ a['1']
 a.slice(1, 3) // ['asdf', 99]
 
 // Push
-a.push(6, 7)     // [3, 'asdf', 99, 6, 7]
-a = [...a, 6, 7]
+a.push(6, 7)     // [3, 'asdf', 99, 6, 7], 11 chars
+a = [...a, 6, 7] //                        12 chars
 a[a.length] = 6  // [3, 'asdf', 99, 6]
 
 // Pop
@@ -93,20 +102,19 @@ a.splice(1, 1) // [3, 99]
 
 // Concatenate
 b = [8, 9]
-a.push(...b) // [3, 'asdf', 99, 8, 9]
-a = a.concat(b)
-a = [...a, ...b]
+a.push(...b)     // 12 chars, [3, 'asdf', 99, 8, 9]
+a = a.concat(b)  // 13 chars
+a = [...a, ...b] // 13 chars
 
 // Clone
-[...a]
-a.slice()
+[...a]    // 6 chars
+a.slice() // 9 chars
 
 // NOTE: You can set and access negative indices on an array, but they count as
 //       object properties, not array indices.
 ```
 
 ## Ranges
-JS has no range syntax.
 ``` js
 [...Array(5).keys()] // [0, 1, 2, 3, 4]
 
@@ -123,6 +131,9 @@ for (; x > y; ...) { ... }
 
 // Range (3 4 5 6 7 8)
 for (i = 2; i++ < 9; ) ...
+
+// Infinite
+for (;;) ...
 ```
 
 ## Reduce
@@ -145,30 +156,87 @@ a.map(n => s += n) | s // 19 chars
 s = 0                             // returns `6` instead of `2` because `map`
 [2].map(n => (s += n, x = 4)) | s //     returns `[4]` and `([4] | 2) == 6`)
 
-// There is a `reduce` function, but it is longer 99% of the time
+// `reduce` is longer 99% of the time
 a.reduce((s, n) => s + n)    // 20 chars, `s` initialised to `a[0]`
 a.reduce((s, n) => s + n, 0) // 22 chars, `s` initialised to `0`
+```
+
+## Operators
+``` js
+// In order of precedence (highest to lowest):
+a**b // a to-the-power-of b
++a // positive a (cast a to number)
+-a // negative a
+~a // bitwise-NOT a (equals -(a+1))
+a * b // a times b
+a / b // a divided-by b (floating-point division)
+a % b // a remainder b (different to modulo for negative numbers)
+(a % b + b) % b // a modulo b
+a + b // a plus b
+a - b // a minus b
+a & b // a bitwise-AND b
+a / b | 0 // a divided-by b (integer division, see casts section)
+a | b // a bitwise-OR b
+a ^ b // a bitwise-XOR b
+a ? b : c // if a then b else c (comma operator cannot be used inside ternary)
+```
+
+## Comma Operator
+The `,` operator returns the result of the rightmost operation.
+``` js
+f = n => { // 20 chars without comma operator
+  x *= 3
+  return n + 3
+}
+f = n => (x *= 3, n + 3) // 15 chars with comma operator
+
+for (i in o) { // without
+  x *= 3
+  n += 3
+}
+for (i in o) // with (saves one char)
+  x *= 3,
+  n += 3
+```
+
+## Spread Operator
+``` js
+a = [4, 5, 6]
+b = [1, 2, 3, ...a] // b = [1, 2, 3, 4, 5, 6]
+f(...a) // f(4, 5, 6)
+```
+
+## Rest Operator
+``` js
+f = (...a) => a; f(1, 2, 3) // returns [1, 2, 3]
+```
+
+## Default Arguments
+``` js
+f = (a, b, c = 2) => [a, b, c]; f(1) // returns [1, undefined, 2]
+f = (a, b = a*2) => [a, b]; f(3)     // returns [3, 6]
 ```
 
 ## Casts
 Casts are pretty weird in JS, so here's a section about how they work:
 - strings cast to numbers like so:
 ``` js
-'1'     -> 1
-' 1 '   -> 1   // leading and trailing whitespace allowed
-'0b101' -> 5   // 0b binary format
-'0xa1'  -> 161 // 0x hex format
-'011'   -> 11  // leading zeroes have no effect, no octal format
-''      -> 0   // empty string casts to 0
+'1'     => 1
+' 1 '   => 1   // leading and trailing whitespace allowed
+'0b101' => 5   // 0b binary format
+'0xa1'  => 161 // 0x hex format
+'011'   => 11  // leading zeroes have no effect, no octal format
+''      => 0   // empty string casts to 0
 
-'1a'    -> NaN // NaN = not-a-number, non-digit in string
-'1 2'   -> NaN // non-digit, not leading or trailing space
+'1a'    => NaN // NaN = not-a-number, non-digit in string
+'1 2'   => NaN // non-digit, not leading or trailing space
 ```
 - arrays cast to strings like so:
 ``` js
 [1]                    -> "1"
 [1, 2, 'zxcv', 3, 'x'] -> "1,2,zxcv,3,x"
 // Each item is cast to string then the array is joined with `,`
+// Equivalent to a.join(',')
 ```
 - functions, objects, etc. all cast to strings too but are less useful
 - when casting to a number, things cast first to a string, then to a number:
