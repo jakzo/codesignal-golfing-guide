@@ -54,8 +54,8 @@ undefined / null
 
 ## Variables
 ``` js
-a = 1     // 1 (global)
-var a = 1 // 1 (local, only use if necessary for recursion, etc)
+a = 1     // global
+var a = 1 // local, only use if necessary (for recursion, etc)
 ```
 
 ## Arrays
@@ -163,21 +163,32 @@ a.reduce((s, n) => s + n, 0) // 22 chars, `s` initialised to `0`
 
 ## Operators
 ``` js
-// In order of precedence (highest to lowest):
+// In order of precedence (highest to lowest, same grouped):
 a**b // a to-the-power-of b
+
 +a // positive a (cast a to number)
 -a // negative a
 ~a // bitwise-NOT a (equals -(a+1))
+
 a * b // a times b
 a / b // a divided-by b (floating-point division)
 a % b // a remainder b (different to modulo for negative numbers)
 (a % b + b) % b // a modulo b
+
 a + b // a plus b
 a - b // a minus b
+
 a & b // a bitwise-AND b
+
 a / b | 0 // a divided-by b (integer division, see casts section)
 a | b // a bitwise-OR b
+
 a ^ b // a bitwise-XOR b
+
+a && b // a logical-AND b (returns a if a is false, else returns b)
+
+a || b // a logical-OR b (returns a if a is true, else returns b)
+
 a ? b : c // if a then b else c (comma operator cannot be used inside ternary)
 ```
 
