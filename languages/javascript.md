@@ -162,8 +162,8 @@ a.reduce((s, n) => s + n, 0) // 22 chars, `s` initialised to `0`
 ```
 
 ## Operators
+In order of precedence (highest to lowest, same grouped):
 ``` js
-// In order of precedence (highest to lowest, same grouped):
 a**b // a to-the-power-of b
 
 +a // positive a (cast a to number)
@@ -210,15 +210,12 @@ for (i in o) // with (saves one char)
   n += 3
 ```
 
-## Spread Operator
+## Spread/Rest Operator
 ``` js
 a = [4, 5, 6]
 b = [1, 2, 3, ...a] // b = [1, 2, 3, 4, 5, 6]
 f(...a) // f(4, 5, 6)
-```
 
-## Rest Operator
-``` js
 f = (...a) => a; f(1, 2, 3) // returns [1, 2, 3]
 ```
 
