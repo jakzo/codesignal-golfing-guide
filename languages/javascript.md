@@ -8,6 +8,11 @@ challenge = (x, y, z) => {
   // multiple statements
   return x + y + z
 }
+
+challenge = (x, y, z) => (// not always shorter and cannot use control statements like if, while
+  1, 2, // multiple expressions seperated with ,
+  x + y + z
+)
 ```
 
 ## Logging
