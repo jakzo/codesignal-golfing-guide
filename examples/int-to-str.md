@@ -1,2 +1,2 @@
 # Int to Str
-- [iDontKnow](https://codefights.com/challenge/xAfWeNKqLqeerhKXy)
+- [iDontKnow](https://app.codesignal.com/challenge/xAfWeNKqLqeerhKXy)

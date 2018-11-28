@@ -1,2 +1,2 @@
 # Array Iterate
-- [raiseIt](https://codefights.com/challenge/TfwEHZH6LwNugvfLi)
+- [raiseIt](https://app.codesignal.com/challenge/TfwEHZH6LwNugvfLi)

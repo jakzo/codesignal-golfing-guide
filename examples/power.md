@@ -1,3 +1,3 @@
 # Power
-- [buildSum](https://codefights.com/challenge/YqTsRei3LjHNaByFP)
-- [raiseIt](https://codefights.com/challenge/TfwEHZH6LwNugvfLi)
+- [buildSum](https://app.codesignal.com/challenge/YqTsRei3LjHNaByFP)
+- [raiseIt](https://app.codesignal.com/challenge/TfwEHZH6LwNugvfLi)

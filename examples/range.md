@@ -1,2 +1,2 @@
 # Range
-- [buildSum](https://codefights.com/challenge/YqTsRei3LjHNaByFP)
+- [buildSum](https://app.codesignal.com/challenge/YqTsRei3LjHNaByFP)

@@ -1,2 +1,2 @@
 # While
-- [fermactor](https://codefights.com/challenge/admES7uudjBkBNSB3)
+- [fermactor](https://app.codesignal.com/challenge/admES7uudjBkBNSB3)

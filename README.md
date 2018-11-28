@@ -1,6 +1,5 @@
-# CodeFights Golfing Guide
-*Collection of code golf tips specific to CodeFights (where whitespace is free
-  and input/output is performed with functions).*
+# CodeSignal Golfing Guide
+*Collection of code golf tips specific to CodeSignal (where whitespace is free and input/output is performed with functions).*
 
 ## Language Cheat Sheets (in progress/incomplete)
 These pages contain golfing idioms and tips for each language.

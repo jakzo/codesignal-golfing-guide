@@ -1,2 +1,2 @@
 # String Concatenation
-- [cards](https://codefights.com/challenge/KPYtAdvnN7Pv27TXr)
+- [cards](https://app.codesignal.com/challenge/KPYtAdvnN7Pv27TXr)

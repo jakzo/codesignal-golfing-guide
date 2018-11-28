@@ -1,2 +1,2 @@
 # Regex Match
-- [convertString](https://codefights.com/challenge/DF6j9AcQSCGtLonyM)
+- [convertString](https://app.codesignal.com/challenge/DF6j9AcQSCGtLonyM)

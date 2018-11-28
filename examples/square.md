@@ -1,2 +1,2 @@
 # Square
-- [nextSquare](https://codefights.com/challenge/DCMvQpeqXo3EjPjG3)
+- [nextSquare](https://app.codesignal.com/challenge/DCMvQpeqXo3EjPjG3)
