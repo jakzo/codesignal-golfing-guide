@@ -1,6 +1,8 @@
 # JavaScript
 
-## Function Declaration
+<details>
+<summary>Function Declaration</summary>
+
 ``` js
 challenge = (x, y, z) => x + y + z // single statement
 
@@ -14,17 +16,24 @@ challenge = (x, y, z) => (// not always shorter and cannot use control statement
   x + y + z
 )
 ```
+</details>
 
-## Logging
+<details>
+<summary>Logging</summary>
+
 ``` js
 challenge = (x, y, z) => {
   console.log(x*y, y*z);
   return x + y + z
 }
 ```
+</details>
 
-## Types
+<details>
+<summary>Types</summary>
+
 JS is __weakly typed__ (eg. `if (x != y)` can be written as `if (x - y)`).
+
 ``` js
 // Primitives:
 0 // number
@@ -46,8 +55,11 @@ a[-1] = 9          // a = [1, 5, 3, undefined x 2, 7] + { '-1': 9 }
 a['-1'] = 4        // a = [1, 5, 3, undefined x 2, 7] + { '-1': 4 }
 a['ab'] = 'cd' // a = [1, 5, 3, undefined x 2, 7] + { '-1': 4, 'ab': 'cd' }
 ```
+</details>
 
-## Truthiness
+<details>
+<summary>Truthiness</summary>
+
 ``` js
 // Falsy
 undefined / null
@@ -56,14 +68,21 @@ undefined / null
 
 // Everything else is truthy
 ```
+</details>
 
-## Variables
+<details>
+<summary>Variables</summary>
+
 ``` js
 a = 1     // global
 var a = 1 // local, only use if necessary (for recursion, etc)
 ```
+</details>
+</details>
 
-## Arrays
+<details>
+<summary>Arrays</summary>
+
 ``` js
 a = [1+2, 'asdf', 99] // [3, 'asdf', 99]
 
@@ -127,8 +146,11 @@ a = []
 for (i = 2; i < 8; i += 2) a.push(i)
 a // [2, 4, 6]
 ```
+</details>
 
-## Loops
+<details>
+<summary>Loops</summary>
+
 ``` js
 // While
 for (; x > y; ...) ...
@@ -140,8 +162,11 @@ for (i = 2; i++ < 9; ) ...
 // Infinite
 for (;;) ...
 ```
+</details>
 
-## Reduce
+<details>
+<summary>Reduce</summary>
+
 ``` js
 // Example: sum of array
 a = [4, 7, 5]
@@ -165,9 +190,13 @@ s = 0                             // returns `6` instead of `2` because `map`
 a.reduce((s, n) => s + n)    // 20 chars, `s` initialised to `a[0]`
 a.reduce((s, n) => s + n, 0) // 22 chars, `s` initialised to `0`
 ```
+</details>
 
-## Operators
+<details>
+<summary>Operators</summary>
+
 In order of precedence (highest to lowest, same grouped):
+
 ``` js
 a**b // a to-the-power-of b
 
@@ -196,9 +225,13 @@ a || b // a logical-OR b (returns a if a is true, else returns b)
 
 a ? b : c // if a then b else c (comma operator cannot be used inside ternary)
 ```
+</details>
 
-## Comma Operator
+<details>
+<summary>Comma Operator</summary>
+
 The `,` operator returns the result of the rightmost operation.
+
 ``` js
 f = n => { // 20 chars without comma operator
   x *= 3
@@ -214,8 +247,11 @@ for (i in o) // with (saves one char)
   x *= 3,
   n += 3
 ```
+</details>
 
-## Spread/Rest Operator
+<details>
+<summary>Spread/Rest Operator</summary>
+
 ``` js
 a = [4, 5, 6]
 b = [1, 2, 3, ...a] // b = [1, 2, 3, 4, 5, 6]
@@ -223,15 +259,22 @@ f(...a) // f(4, 5, 6)
 
 f = (...a) => a; f(1, 2, 3) // returns [1, 2, 3]
 ```
+</details>
 
-## Default Arguments
+<details>
+<summary>Default Arguments</summary>
+
 ``` js
 f = (a, b, c = 2) => [a, b, c]; f(1) // returns [1, undefined, 2]
 f = (a, b = a*2) => [a, b]; f(3)     // returns [3, 6]
 ```
+</details>
 
-## Casts
+<details>
+<summary>Casts</summary>
+
 Casts are pretty weird in JS, so here's a section about how they work:
+
 - strings cast to numbers like so:
 ``` js
 '1'     => 1
@@ -330,3 +373,4 @@ arrA == arrB // true, they are the same array (pushing to one will push to both)
 ['a', 'b', 'c'].join(1) // "a1b1c" (1 cast to "1")
 'xaaayaz'.match('a+') // ["aaa"] ('a+' cast to regex /a+/)
 ```
+</details>
