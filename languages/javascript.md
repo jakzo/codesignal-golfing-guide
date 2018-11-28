@@ -32,28 +32,31 @@ challenge = (x, y, z) => {
 <details>
 <summary>Types</summary>
 
-JS is __weakly typed__ (eg. `if (x != y)` can be written as `if (x - y)`).
+JS is __weakly typed__ (eg. `if (x != y)` can be written as `if (x - y)` because `0` is falsy).
 
 ``` js
 // Primitives:
+null // null
+undefined // undefined (acts like `null`)
 0 // number
 true // boolean (behaves mostly the same as `1` (true) or `0` (false))
 'asdf' // string
+// (also symbols but they're useless for golfing)
 
 // All primitives are immutable (eg. `s = 'x'; s += 'y'; s == 'x' // true`)
 
-// Objects:
+// Objects: (ie. everything that is not a primitive)
 [1, 2, 3] // array
 { x: 'fds' } // object
 x => x+1 // function
 
-// You can access and set *any* property on objects:
-a = [1, 2, 3]
-a[1] = 5           // a = [1, 5, 3]
-a[5] = 7           // a = [1, 5, 3, undefined x 2, 7]
-a[-1] = 9          // a = [1, 5, 3, undefined x 2, 7] + { '-1': 9 }
-a['-1'] = 4        // a = [1, 5, 3, undefined x 2, 7] + { '-1': 4 }
-a['ab'] = 'cd' // a = [1, 5, 3, undefined x 2, 7] + { '-1': 4, 'ab': 'cd' }
+// You can access and set *any* property on objects: (all keys are coerced to strings)
+a = [1, 2, 3]      // a = { 0: 1, 1: 2, 2: 3 }
+a[1] = 5           // a = { 0: 1, 1: 5, 2: 3 }
+a[5] = 7           // a = { 0: 1, 1: 5, 2: 3, 5: 7 }
+a[-1] = 9          // a = { 0: 1, 1: 5, 2: 3, 5: 7, -1: 9 }
+a['-1'] = 4        // a = { 0: 1, 1: 5, 2: 3, 5: 7, -1: 4 }
+a['ab'] = 'cd'     // a = { 0: 1, 1: 5, 2: 3, 5: 7, -1: 4, ab: 'cd' }
 ```
 </details>
 
